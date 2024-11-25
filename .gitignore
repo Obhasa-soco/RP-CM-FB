@@ -1,6 +1,9 @@
 # Ignore virtual environment
 .claw_venv/
 
+# .env
+.env
+
 # Ignore sensitive Firebase credentials
 serviceAccountKey.json
 (second)serviceAccountKey.json
