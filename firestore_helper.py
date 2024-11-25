@@ -40,8 +40,10 @@ class FirebaseDB:
             return False
 
     def add_data(self, barcode, status):
+        # Collection Name
+        COLLECTION = os.getenv("THIS_IS_COLLECTION")
         # Reference to the Firestore collection (you can change the collection name)
-        doc_ref = self.db.collection('barcode_status').document(barcode)
+        doc_ref = self.db.collection(COLLECTION).document(barcode)
 
         # Add data to Firestore
         doc_ref.set({
